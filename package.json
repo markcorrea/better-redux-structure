@@ -1,0 +1,50 @@
+{
+  "name": "pizza-list",
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0"
+  },
+  "version": "1.0.0",
+  "description": "Pizza list app which allows us to order pizzas on Luigi's Pizza.",
+  "scripts": {
+    "start": "npm run build",
+    "build": "webpack -d && cp ./index.html dist/index.html && webpack-dev-server --hot --open",
+    "build:prod": "webpack -p && cp ./index.html dist/index.html"
+  },
+  "author": "Marcus Corrêa",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-minify": "^0.5.0",
+    "babel-plugin-module-resolver": "^3.1.2",
+    "babel-plugin-rewire": "^1.2.0",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.8.3",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^3.5.5",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "apollo-boost": "^0.1.27",
+    "graphql": "^14.1.1",
+    "react": "^16.3.0",
+    "react-apollo": "^2.4.1",
+    "react-dom": "^16.3.0",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-promise-middleware": "^6.1.0",
+    "redux-thunk": "^2.3.0"
+  }
+}
