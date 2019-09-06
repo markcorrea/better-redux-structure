@@ -1,13 +1,16 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux'
-import logger from 'redux-logger'
-import thunk from 'redux-thunk'
-import promise from 'redux-promise-middleware'
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
+import logger from "redux-logger";
+import thunk from "redux-thunk";
+import promise from "redux-promise-middleware";
 
-import math from './reducers/mathReducer'
-import user from './reducers/userReducer'
+import math from "./reducers/math";
+import user from "./reducers/user";
 
 export default createStore(
   combineReducers({ math, user }),
   {},
-  applyMiddleware(logger, thunk, promise)
-)
+  compose(
+    applyMiddleware(logger, thunk, promise),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
+);
